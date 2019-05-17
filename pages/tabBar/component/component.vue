@@ -49,7 +49,7 @@ export default {
 			this.$showModal({
 				title:"我是标题",
 				content:'我内容',
-				showCancel:false,
+				showCancel:true,
 				// cancelText:"取消le",
 				// cancelColor:"#000000",
 				// confirmText:"确定la",
