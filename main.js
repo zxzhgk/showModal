@@ -5,8 +5,8 @@ import App from './App'
 // import pageFoot from './components/page-foot.vue'
 
 // 注册全局modal组件
-import initModal from "@/components/show-modal/initModal.js";
-import showModal from '@/components/show-modal/show-modal';
+import initModal from "@/components/zhangxu-showModal/initModal.js";
+import showModal from '@/components/zhangxu-showModal/show-modal';
 initModal(Vue);
 Vue.component('show-modal',showModal);
 

@@ -66,7 +66,7 @@ export default {
 						wx.showToast({
 							title: '点击了取消',
 							icon: 'none',
-							duration: 2000
+							duration: 900000
 						})
 					}
 				},
