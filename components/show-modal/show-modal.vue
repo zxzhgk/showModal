@@ -8,7 +8,7 @@
 					{{content}}
 				</div>
 				<div class="btnbox">
-					<div class="cancel btn" :style="cancelColor" @click="clickBtn('cancel')">{{cancelText}}</div>
+					<div class="cancel btn" v-show="showCancel" :style="cancelColor" @click="clickBtn('cancel')">{{cancelText}}</div>
 					<div class="confirm btn" :style="confirmColor" @click="clickBtn('confirm')">{{confirmText}}</div>
 				</div>
 			</div>
@@ -28,6 +28,9 @@ export default {
 		},
 		content(){
 			return this.$modalStore.state.content;
+		},
+		showCancel(){
+			return this.$modalStore.state.showCancel;
 		},
 		cancelText(){
 			return this.$modalStore.state.cancelText;

@@ -18,14 +18,42 @@ export default {
 	},
 	methods: {
 		showModal(){
+			// 完整
+			// this.$showModal({
+			// 	title:"我是标题",
+			// 	content:'我内容',
+			// 	showCancel:true,
+			// 	cancelText:"取消le",
+			// 	cancelColor:"#000000",
+			// 	confirmText:"确定la",
+			// 	confirmColor:"red",
+			// 	hideTabBar:true,
+			// 	success:function(res){
+			// 		if(res.confirm){
+			// 			wx.showToast({
+			// 				title: '点击了确定',
+			// 				icon: 'none',
+			// 				duration: 2000
+			// 			})
+			// 		}else{
+			// 			wx.showToast({
+			// 				title: '点击了取消',
+			// 				icon: 'none',
+			// 				duration: 2000
+			// 			})
+			// 		}
+			// 	},
+			// })
+			
+			// 部分
 			this.$showModal({
 				title:"我是标题",
 				content:'我内容',
-				showCancel:true,
-				cancelText:"取消le",
-				cancelColor:"#000000",
-				confirmText:"确定la",
-				confirmColor:"red",
+				showCancel:false,
+				// cancelText:"取消le",
+				// cancelColor:"#000000",
+				// confirmText:"确定la",
+				// confirmColor:"red",
 				hideTabBar:true,
 				success:function(res){
 					if(res.confirm){
