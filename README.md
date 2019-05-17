@@ -1,10 +1,11 @@
-##showModal
+#showModal
 适用于uni-app  的跨端显示弹层，使用接口参数与uni-app 中的showModal参数一致
-显示模态弹窗，类似于标准 html 的消息框：alert、confirm。
+显示模态弹窗，类似于标准 html 的消息框：alert、confirm。  
+
 **注意项**
 1. 依赖于 vuex 如没有安装请先安装vuex
 2. 样式使用scss 请安装或修改 样式为你的预处理语言
-##使用方式
+#使用方式
 1. 在main.js中
 ~~~
 // 注册全局modal组件
@@ -35,7 +36,7 @@ this.$showModal({
   }
 })
 ~~~
-##OBJECT参数说明
+#OBJECT参数说明
 
 | 参数  | 类型 |必填	|说明|
 | ------ |------ |------ |------ |
@@ -49,7 +50,7 @@ this.$showModal({
 |success|	Function|	否|	接口调用成功的回调函数	|
 |hideTabBar|Boolean|	否|	是否隐藏tabBar在APP和小程序中隐藏tabBar 可以让遮罩层全屏|
 	 
-##success返回参数说明
+#success返回参数说明
 
 |参数	|类型	|说明|
 | ------ |------ |------ |
