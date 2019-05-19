@@ -20,7 +20,7 @@
 		methods: {
 			aaa(){
 				this.$showModal({
-				  title: '提示',
+				  title: '打到',
 				  content: '这是一个模态弹窗',
 				  success(res) {
 					if (res.confirm) {
