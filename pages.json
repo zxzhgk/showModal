@@ -3,9 +3,28 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/showModal/index",
+			"style": {
+				"navigationBarTitleText": "弹层页"
+			}
+		},
+		{
+			"path": "pages/slot/index",
+			"style": {
+				"navigationBarTitleText": "slot"
+			}
+		},
+		{
+			"path": "pages/eventBus/index",
+			"style": {
+				"navigationBarTitleText": "slot"
 			}
 		}
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
