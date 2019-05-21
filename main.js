@@ -10,7 +10,8 @@ initModal(Vue);
 Vue.component('show-modal',showModal);
 
 App.mpType = 'app'
-
+//挂载全局bus
+Vue.prototype.$bus = new Vue();
 const store = new Vuex.Store();
 const app = new Vue({
 	store,

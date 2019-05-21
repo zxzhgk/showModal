@@ -97,11 +97,11 @@ export default {
 					text-align: center;
 					font-size: 26upx;
 					font-weight: bold;
-					padding: 15upx 0;
+					padding: 15upx 0 0;
 					// border-bottom: 1upx solid #e1e1e1;
 				}
 				.content{
-					padding:10upx 30upx 30upx;
+					padding:30upx;
 					font-size: 24upx;
 					color: #666;
 					line-height: 35upx;
