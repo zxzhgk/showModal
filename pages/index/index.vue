@@ -20,18 +20,22 @@
 		methods: {
 			aaa(){
 				this.$showModal({
-				  title: '提示',
-				  content: '这是一个模态弹窗',
+				  title: '触发确定',
+				  content: '我没有标题',
+				  showCancel:true,
 				  success(res) {
 					if (res.confirm) {
-					  console.log('用户点击确定')
+					 wx.showToast({
+					 	title: '点击了确定',
+					 	icon: 'none',
+					 	duration: 90000
+					 })
 					} else if (res.cancel) {
 					  console.log('用户点击取消')
 					}
 				  }
 				})
 			}
-
 		}
 	}
 </script>
