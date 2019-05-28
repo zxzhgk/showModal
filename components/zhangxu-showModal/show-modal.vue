@@ -1,15 +1,15 @@
 <template>
 	<div class="_showModal" v-show="show">
-		<div class="_shade" @click="closeModal"></div>
-		<div class="_modalBox">
+		<div class="_shade"></div>
+		<div class="_modalBox" @click="closeModal" @touchmove.stop.prevent="">
 			<div class="_modal">
 				<div class="title" v-show="title">{{title}}</div>
 				<div class="content">
 					{{content}}
 				</div>
 				<div class="btnbox">
-					<div class="cancel btn" v-show="showCancel" :style="cancelColor" @click="clickBtn('cancel')">{{cancelText}}</div>
-					<div class="confirm btn" :style="confirmColor" @click="clickBtn('confirm')">{{confirmText}}</div>
+					<div class="cancel btn" v-show="showCancel" :style="cancelColor" @click.stop="clickBtn('cancel')">{{cancelText}}</div>
+					<div class="confirm btn" :style="confirmColor" @click.stop="clickBtn('confirm')">{{confirmText}}</div>
 				</div>
 			</div>
 		</div>
@@ -53,6 +53,9 @@ export default {
 			this.$modalStore.commit('hideModal')
 			this.$modalStore.commit('success',res)
 		}
+	},
+	beforeDestroy(){
+		this.$modalStore.commit('hideModal')
 	}
 };
 </script>
