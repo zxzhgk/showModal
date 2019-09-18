@@ -13,15 +13,9 @@
 			}
 		},
 		{
-			"path": "pages/slot/index",
-			"style": {
-				"navigationBarTitleText": "slot"
-			}
-		},
-		{
 			"path": "pages/eventBus/index",
 			"style": {
-				"navigationBarTitleText": "slot"
+				"navigationBarTitleText": "eventBus"
 			}
 		}
 		

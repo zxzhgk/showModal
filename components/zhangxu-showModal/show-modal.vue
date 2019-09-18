@@ -3,17 +3,22 @@
 		<div class="_shade"></div>
 		<div class="_modalBox" @click="closeModal" @touchmove.stop.prevent="">
 			<div class="_modal">
-				<div class="title" v-show="title">{{title}}</div>
-				<div class="content">
-					{{content}}
-				</div>
-				<div class="btnbox">
-					<div class="cancel btn" v-show="showCancel" :style="cancelColor" @click.stop="clickBtn('cancel')">{{cancelText}}</div>
-					<div class="confirm btn" :style="confirmColor" @click.stop="clickBtn('confirm')">{{confirmText}}</div>
-				</div>
+				<slot name="title">
+					<div class="title" v-show="title">{{title}}</div>
+				</slot>
+				<slot name="content">
+					<div class="content">
+						{{content}}
+					</div>
+				</slot>
+				<slot name="btn">
+					<div class="btnbox">
+						<div class="cancel btn" v-show="showCancel" :style="cancelColor" @click.stop="clickBtn('cancel')">{{cancelText}}</div>
+						<div class="confirm btn" :style="confirmColor" @click.stop="clickBtn('confirm')">{{confirmText}}</div>
+					</div>
+				</slot>
 			</div>
 		</div>
-		
 	</div>
 </template>
 

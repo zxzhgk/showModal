@@ -1,26 +1,20 @@
 <template>
 	<div class="content">
 		<div class="list" @click="toShowModal">弹层示例</div>
-		<div class="list" @click="toSlot">slot示例</div>
 		<div class="list" @click="toArguments">组件间传参</div>
 
 	</div>
 </template>
 
 <script>
-import comA from "../../components/componenta/a.vue"
-import comB from "../../components/componentb/b.vue"
 export default {
 	data() {
 		return {
-			title: '点我点我',
-			indexData:"我是index.vue中的数据",
-			aProps:"我是来自index的props"
+			
 		}
 	},
 	components:{
-		"com-a":comA,
-		"com-b":comB
+		
 	},
 	onLoad() {
 
@@ -34,11 +28,6 @@ export default {
 		toShowModal(){
 			wx.navigateTo({
 				url:"../showModal/index"
-			})
-		},
-		toSlot(){
-			wx.navigateTo({
-				url:"../slot/index"
 			})
 		},
 		aaa(){

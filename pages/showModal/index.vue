@@ -1,7 +1,15 @@
 <template>
 	<div class="center">
 		<div class="list" @click="a">普通示例</div>
-		<show-modal></show-modal>
+		<div class="list" @click="b">自定义示例</div>
+		<show-modal>
+			<template v-slot:title v-if="isCustom">
+				<div>我是自定义的头部呀</div>
+			</template>
+			<template v-slot:content v-if="isCustom">
+				<div>我是自定义的中间部分呀</div>
+			</template>
+		</show-modal>
 	</div>
 </template>
 
@@ -9,7 +17,7 @@
 	export default {
 		data() {
 			return {
-				
+				isCustom:false
 			}
 		},
 		components:{
@@ -20,9 +28,22 @@
 		},
 		methods: {
 			a(){
+				this.isCustom=false;
 				this.$showModal({
 				  title: '打到',
 				  content: '这是一个模态弹窗',
+				  success(res) {
+					if (res.confirm) {
+					  console.log('用户点击确定')
+					} else if (res.cancel) {
+					  console.log('用户点击取消')
+					}
+				  }
+				})
+			},
+			b(){
+				this.isCustom=true;
+				this.$showModal({
 				  success(res) {
 					if (res.confirm) {
 					  console.log('用户点击确定')
