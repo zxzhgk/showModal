@@ -1,8 +1,6 @@
 <template>
 	<div class="content">
 		<div class="list" @click="toShowModal">弹层示例</div>
-		<div class="list" @click="toArguments">组件间传参</div>
-
 	</div>
 </template>
 
@@ -20,11 +18,6 @@ export default {
 
 	},
 	methods: {
-		toArguments(){
-			wx.navigateTo({
-				url:"../eventBus/index"
-			})
-		},
 		toShowModal(){
 			wx.navigateTo({
 				url:"../showModal/index"
